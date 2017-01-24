@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<?php 
+
+$login = "";
+$registrer ="Registrer";
+session_start();
+if( isset($_SESSION["brukernavn"]) ){
+$login =  $_SESSION["brukernavn"];
+$registrer ="";
+}
+else{
+    // session ikke startet
+	$login = "Logg inn";
+	header("Location: innlogging.php"); 
+exit();
+}
+
+?>
+<header><a href="index.php">Perfect Hotels Premium</a></header>
+<nav id="sidebar">
+<a href="registrerkunde.php"><?php print($registrer) ?></a>
+<div id="brukerpanel">
+<?php if( isset($_SESSION["brukernavn"]) ){
+}
+else{
+print('<a href="innlogging.php">');} ?>
+<?php print($login) ?></a>
+
+<?php if( isset($_SESSION["brukernavn"]) ){
+print('<a href="loggut.php">Logg ut</a>');
+}
+?>
+</div></nav><br />
+
+    <nav id="hovedmeny">
+      <ul>
+        <li class="hjem"><a href="index.php">Hjem</a></li>
+        <li class="link 1"><a href="#">Registrer</a>
+          <ul>
+			<li><a href="registrerKunde.php">Kunde</a></li>
+			<li><a href="registrerBestilling.php">Bestilling</a></li>
+			<li><a href="registrerRomtype.php">Romtype</a></li>
+			<li><a href="rom.php">Rom</a></li>
+            <li><a href="registrerLandBy.php">Land/by/hotell</a></li>
+			<li><a href="registrerBetalingsmetode.php">Betalingsmetode</a></li>
+			<li><a href="registrerBetaling.php">Betaling</a></li>
+			<li><a href="registrerBruker.php">Bruker</a></li>
+		
+          </ul>
+        </li>
+        <li class="Link"><a href="#">Oversikt</a>
+          <ul>
+            <li><a href="visKunde.php">Kunder</a></li>
+            <li><a href="visBestilling.php">Bestillinger</a></li>
+            <li><a href="visRomtype.php">Romtyper</a></li>
+            <li><a href="visRom.php">Rom</a></li>
+            <li><a href="visLandByHotell.php">Land, byer og hoteller</a></li><br />
+            <li><a href="visBetalingsMetode.php">Betalingsmetoder</a></li>
+            <li><a href="visBetalingsinfo.php">Betalingsinfo</a></li>
+			<li><a href="visBruker.php">Bruker</a></li>
+          </ul>
+        </li>
+        <li class="Link"><a href="#">Endre</a>
+          <ul>
+            <li><a href="endreKunde.php">Kunder</a></li>
+			<li><a href="endreBestilling.php">Bestilling</a></li>
+			<li><a href="endreRomtype.php">Romtype</a></li>
+			<li><a href="endreRom.php">Rom</a></li>
+			<li><a href="endreLand.php">Land</a></li>
+			<li><a href="endreBy.php">By</a></li>
+			<li><a href="endreHotell.php">Hotell</a></li>
+			<li><a href="endreBetalingsmetode.php">Betalingsmetode</a></li>
+			<li><a href="endreBetalingsinfo.php">Betalingsinfo</a></li>
+			<li><a href="endreBruker.php">Bruker</a></li>
+          </ul>  
+        </li>  
+		<li class="Link"><a href="#">Slett</a>
+      <ul>
+        <li><a href="slettKunde.php">Kunde</a></li>
+		<li><a href="slettBestilling.php">Bestilling</a></li>
+		<li><a href="slettRomtype.php">Romtype</a></li>
+		<li><a href="slettRom.php">Rom</a></li>
+		<li><a href="slettLand.php">Land</a></li>
+		<li><a href="slettBy.php">By</a></li>
+		<li><a href="slettHotell.php">Hotell</a></li>
+		<li><a href="slettBetalingsmetode.php">Betalingsmetode</a></li>
+		<li><a href="slettBetalingsinfo.php">Betalingsinfo</a></li>
+		<li><a href="slettBruker.php">Bruker</a></li>
+      </ul>
+
+    </li>
+      </ul>
+    </nav>
+<div id="container">
+<article>
+

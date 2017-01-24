@@ -1,0 +1,153 @@
+.error {
+  color: #444;
+}
+body {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	height:100%;
+	background-image: url(bilder/beach.jpg);
+	background-repeat: repeat;
+}
+
+header, header a {
+	font-family:Helvetica, sans-serif;
+	color: #1E4EF2;
+	font-size: 40px;
+	padding: 30px;
+	width: auto;
+	text-decoration: none;
+	background-color: #a8daff;
+}
+ #brukerpanel {
+	display:inline;	
+	background-color: #a8daff;
+}
+nav#sidebar {
+	float:none; 
+	background-color: #a8daff;
+	width: 100%;
+	padding-left: 10px; 
+} 
+nav#sidebar a {
+	text-decoration: none;
+	color: #444;
+}
+nav#sidebar a:hover {
+	color: #999;
+}
+ nav#hovedmeny {
+	 position:absolute;
+	 width: 100%;
+	 z-index:1000;
+ }
+  nav#hovedmeny li {
+	width: 140px;
+	border-bottom: none;
+	height: 20px;
+	line-height: 20px;
+	font-size: 1.3em;
+	display: inline-block;
+	margin-right: -4px;
+	font-family: Helvetica, sans-serif;
+  }
+nav#hovedmeny ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+nav#hovedmeny a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+
+  border-bottom: 1px solid #888;
+  transition: .5s background-color;
+  border-bottom: none;
+}
+nav#hovedmeny a:hover {
+  background-color: #737575;
+}
+nav#hovedmeny a.active {
+  background-color: #aaa;
+  color: #444;
+  cursor: default;
+}
+nav#hovedmeny li li {
+  font-size: .8em;
+}
+  nav#hovedmeny > ul > li {
+    text-align: center;
+  }
+  nav#hovedmeny > ul > li > a {
+    padding-left: 0;
+  }
+  nav#hovedmeny li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+  }
+  nav#hovedmeny li:hover ul {
+    display: block;
+  }
+  nav#hovedmeny li ul li {
+    display: block;
+  }
+article {
+	width: 60%;
+	background-image: url(bilder/light.png);
+	background-repeat: repeat;
+	margin-right: auto;
+	margin-left: auto;
+	position: fixed;
+	top: 143px;
+	bottom: 60px;
+	left: 10%;
+	right: 10%;
+	padding-left: 10 px;
+	overflow:auto;
+}
+form#tekstfelt, form#innloggingsskjema {
+	margin: 0;
+	padding-right: 50px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	text-align:left;
+}
+p, p#melding {
+	margin: 0;
+	padding-top: 20px;
+	padding-right: 50px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	text-align:left;
+	text-decoration: none;
+}
+p a {
+	text-decoration: none;
+	color: #444;
+}
+p a:hover {
+	color: #FFF;
+}
+h2, h1, h4 {
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+h3 {
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-top: 0px;
+}
+footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:60px;
+	background: #84C1FF;
+	text-align:center;
+	color: #0073E6;
+}

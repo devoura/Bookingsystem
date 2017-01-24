@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<?php 
+
+$login = "";
+$registrer ="Registrer";
+session_start();
+if( isset($_SESSION["brukernavn"]) ){
+$login =  $_SESSION["brukernavn"];
+$registrer ="";
+}
+else{
+    // session ikke startet
+	$login = "Logg inn";
+}
+
+?>
+<header><a href="index.php">Perfect Hotels Premium</a></header>
+<nav id="sidebar">
+<a href="registrerkunde.php"><?php print($registrer) ?></a>
+<div id="brukerpanel">
+<?php if( isset($_SESSION["brukernavn"]) ){
+print('<a href="konto.php">');}
+else{
+print('<a href="innlogging.php">');} ?>
+<?php print($login) ?></a>
+
+<?php if( isset($_SESSION["brukernavn"]) ){
+print('<a href="loggut.php">Logg ut</a>');
+}
+?>
+</div></nav>
+
+    <nav id="hovedmeny">
+      <ul>
+        <li class="hjem"><a href="index.php">Hjem</a></li>
+        <li class="link 1"><a href="bestilling.php">Bestill</a>
+        </li>
+        
+        <li class="Link"><a href="#">Endre</a></li>
+		<li class="Link"><a href="sjekkInn.php">Sjekk inn</a></li>
+		<li class="Link"><a href="visRom.php">Oversikt</a></li>
+      </ul>
+    </nav>
+<div id="container">
+<article>
